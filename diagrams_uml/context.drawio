@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-17T21:54:31.727Z" agent="5.0 (X11)" etag="me8YZAF6UKBmSGQy2quq" version="15.8.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2022-01-17T21:57:53.338Z" agent="5.0 (X11)" etag="ZXgXFAjRp4T5r5oyYmC1" version="15.8.7" type="github" pages="2">
   <diagram id="dEnHPHHX68f_mmb1mJtB" name="Context  Diagram">
     <mxGraphModel dx="1422" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -248,7 +248,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XPATIeBGFoGHhk_QoPtu-31" value="Demander au patient d&#39;effectuer un test" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fontColor=#333333;strokeWidth=1;fillColor=#FFFFFF;" vertex="1" parent="Shx9F2xdIUPQt7zczx8I-1">
+        <mxCell id="XPATIeBGFoGHhk_QoPtu-31" value="Demander au patient d&#39;effectuer un examen" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fontColor=#333333;strokeWidth=1;fillColor=#FFFFFF;" vertex="1" parent="Shx9F2xdIUPQt7zczx8I-1">
           <mxGeometry x="260" y="550" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="XPATIeBGFoGHhk_QoPtu-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;fontColor=#333333;" edge="1" parent="Shx9F2xdIUPQt7zczx8I-1" source="XPATIeBGFoGHhk_QoPtu-32">
@@ -265,7 +265,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="XPATIeBGFoGHhk_QoPtu-32" value="Consulter les résultats du test" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fontColor=#333333;strokeWidth=1;fillColor=#FFFFFF;" vertex="1" parent="Shx9F2xdIUPQt7zczx8I-1">
+        <mxCell id="XPATIeBGFoGHhk_QoPtu-32" value="Consulter les résultats de l&#39;examen" style="ellipse;whiteSpace=wrap;html=1;fontSize=13;fontColor=#333333;strokeWidth=1;fillColor=#FFFFFF;" vertex="1" parent="Shx9F2xdIUPQt7zczx8I-1">
           <mxGeometry x="300" y="610" width="230" height="50" as="geometry" />
         </mxCell>
       </root>
