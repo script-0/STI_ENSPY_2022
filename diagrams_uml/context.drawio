@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-17T20:56:27.001Z" agent="5.0 (X11)" etag="74ywWAicLEesdu9G7KkC" version="15.8.7" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-17T20:56:48.306Z" agent="5.0 (X11)" etag="ExK-bnqxXW2XRYafGx3C" version="15.8.7" type="github" pages="2">
   <diagram id="dEnHPHHX68f_mmb1mJtB" name="Context  Diagram">
     <mxGraphModel dx="1422" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -24,6 +24,14 @@
         <mxCell id="01sqI_WsHop8ThjdI0US-3" value="Étudiant médécin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="130" y="330" width="30" height="60" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="Vyi6rh6e5xZRLpnm3FMA" name="Use case Diagram">
+    <mxGraphModel dx="1422" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="Shx9F2xdIUPQt7zczx8I-0" />
+        <mxCell id="Shx9F2xdIUPQt7zczx8I-1" parent="Shx9F2xdIUPQt7zczx8I-0" />
       </root>
     </mxGraphModel>
   </diagram>
