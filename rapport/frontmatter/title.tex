@@ -1,0 +1,74 @@
+
+\ifprintVersion
+    \newgeometry
+    {
+        textwidth = 134 mm,
+        textheight = 220 mm,
+        top = 38 mm - (297 mm - 297 mm) * \real{0.5} + \extraborderlength,
+        inner = (210 mm - 134 mm - 2\extraborderlength ) * \real{0.5}  + \extraborderlength,
+    }
+\else
+    \newgeometry
+    {
+        textwidth = 155 mm,
+        textheight = 220 mm,
+        top = 38 mm - (297 mm - 297 mm) * \real{0.5},
+        inner = (210 mm - 155 mm) * \real{0.5},
+    }
+\fi
+
+\begin{titlingpage}
+\begin{singlespace}
+    \begin{center}
+        \begin{minipage}{0.35\textwidth}
+    		\begin{center}
+    			UNIVERSITÉ DE YAOUNDÉ I \\
+    			*****\\
+    			ÉCOLE NATIONALE SUPÉRIEURE POLYTECHNIQUE YAOUNDE\\
+    			*******\\
+    			DÉPARTEMENT DE GÉNIE INFORMATIQUE\\
+    		\end{center}
+    	\end{minipage}
+    	\begin{minipage}{0.29\textwidth}
+        	\begin{center}
+        	     \includegraphics[height = 3 cm]{resources/ensp_logo.jpg}    
+        	\end{center}
+        \end{minipage}
+        \begin{minipage}{0.35\textwidth}\raggedright
+        	\begin{center}
+        			UNIVERSITY OF YAOUNDE I\\
+        		*****\\
+        		NATIONAL ADVANCED SCHOOL OF ENGINEERING OF YAOUNDE\\
+        		*******\\
+        		DEPARTMENT OF COMPUTER ENGINEERING\\
+        	\end{center}
+        \end{minipage}
+    \end{center}
+    \vspace*{0.5mm}
+    \begin{center}
+    	{\LARGE\textsc{PROJET DE SYSTÈME TUTORIEL}\\ \vspace*{3mm} {INTELLIGENT }}\\
+    	\vspace{5mm}
+    	{\large\textsc{THÈME:}}\\
+    	\vspace{5mm}
+        \rule[0.5ex]{\linewidth}{2pt}\vspace*{-\baselineskip}\vspace*{3.2pt}
+        \rule[0.5ex]{\linewidth}{1pt}\\[\baselineskip]
+        {\large PATIENT VIRTUEL }\\[4mm]
+        \rule[0.5ex]{\linewidth}{1pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+        \rule[0.5ex]{\linewidth}{2pt}\\
+        \vspace{4mm}
+        {\large \textbf{Par}}\\
+        \vspace{3mm}
+        {\large\textsc{HARA ZANG Ulrich} \\ MOUNAH Césaire \\ NDEMA Isaac\\ NGAGOM Chebil \\ TALLA James}\\
+        \vspace{5mm}
+        {\large \textbf{Sous la supervision de :}\\
+        	\vspace{5mm}
+        \textsc{Dr Bernabé BATCHAKUI}}\\
+        \vspace{4mm}
+        {\large\textsc{GI 2022}}
+        %\vspace{12mm}
+    \end{center}
+
+\end{singlespace}
+\end{titlingpage}
+
+\restoregeometry
