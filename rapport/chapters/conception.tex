@@ -23,6 +23,7 @@ Dans cette section, nous faisons une présentation détaillée des composantes d
 Nous avons choisi le modèle de recouvrement ( Overlay) ( Carr et Goldstein, 1977) pour la représentation des connaissances de l'apprenant dans notre système. Dans ce modèle, les connaissances de l'apprenant sont construites sur les éléments de connaissance de l'expert (ou éléments de connaissance du domaine considéré) . Dans cette approche, les compétences indiquent clairement l'habileté de l'apprenant à utiliser ses connaissances. Cette méthode s'est avérée être un choix judicieux et adapté au contexte, car toutes les compétences à acquérir sont définies de manière intrinsèque et sans ambiguïté par les connaissances du domaine. La figure 3.2 présente le modèle Overlay. 
 
 \begin{figure}
+    \centering
     \includegraphics[width=0.75\textwidth]{figures/con1.PNG}
     \captionsetup{justification=centering}
     \caption{Représentation des connaissances de l'apprenant (modèle overlay)}
@@ -37,10 +38,11 @@ Nous avons choisi le modèle de recouvrement ( Overlay) ( Carr et Goldstein, 197
 \item \textbf{Le Modèle Affectif},ce modèle est un ensemble de données permettant de cerner les caractéristiques et les différentes facettes d'un étudiant. Il contient des connaissances relatives aux caractéristiques particulières permanentes ou momentanées de l'apprenant (ceci n'est pas disponible dans l'état actuel de notre modèle). 
 \item \textbf{Modèle d'inférences}: Pour nous, ce modèle contient les informations sur les modes d'inférences que l'apprenant applique dans son raisonnement (par exemple les modes de
 raisonnement (inductif ou déductive que l'étudiant utilise dans ses résolutions de
-problémes) [Shiri, 1997.
+problèmes) [Shiri, 1997.
 \item \textbf{Modeleur} : Le Modeleur a pour objectif de mettre à jour les connaissances de l'apprenant (gestion du modèle de l'apprenant); reconnaître ses bonnes performances; relever les connaissances erronées et suggérer des corrections. La Figure 3.2 illustre l'architecture du modèle de l'apprenant. Dans cette figure la notion « le comportement de l'apprenant )) inclue ses réponses aux questions. ses actions (comme la tâche d'adaptation). et les résultats de ces actions comme les solutions obtenues, etc.
 \end{enumerate}
 \begin{figure}
+    \centering
     \includegraphics[width=0.75\textwidth]{figures/md_inf.png}
     \captionsetup{justification=centering}
     \caption{ L'architecture du modèle de l'apprenant }
@@ -202,6 +204,7 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
     Les différents noeuds du graphe sont des questions qui peuvent être posée à une étape précise du diagnostic et les liens entre les différents noeuds représentent les réponses possibles qu'un patient peut donner. Les feuilles de l'arbre quant à elles sont les différentes maladies connues de l'expert.
     
     \begin{figure}[H]
+        \centering
         \includegraphics[width=0.35\textwidth]{figures/concept_expert.png}
         \captionsetup{justification=centering}
         \caption{Modèle expert dans notre STI}
@@ -214,6 +217,7 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
     
     
     \begin{figure}[H]
+        \centering
         \includegraphics[width=0.75\textwidth]{figures/Trans base cas-reseau bayesien.png}
         \captionsetup{justification=centering}
         \caption{Transformation des cas en réseau bayésien}
@@ -237,10 +241,11 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
     Il existe deux types d'actions que le patient virtuel est capable d'effectuer:
     \begin{description}
         \item[Répondre à une question:] Le module permet directement à partir des données renvoyées par le module de traitement de générer un texte ou un message vocal à transmettre à l'apprenant via l'interface. Ce message sert de réponse à une question préalablement posée par ce dernier.
-        \item[Manifester les signes physiques d'une maladie:] Ce composant est responsable de simuler les différents tics physique et de donner des métainformations par rapport aux paramètres a l'apprenant via l'interface.
+        \item[Manifester les signes physiques d'une maladie:] Ce composant est responsable de simuler les différents tics physique et de donner des méta-informations par rapport aux paramètres a l'apprenant via l'interface.
     \end{description}
 
     \begin{figure}[H]
+        \centering
         \includegraphics[width=0.75\textwidth]{figures/conc-patient virtuel.png}
         \captionsetup{justification=centering}
         \caption{Module Patient Virtuel}
@@ -263,10 +268,10 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
     \paragraph{Identification de la population cible} \hfill \\
     Les principaux utilisateurs de notre système ( notre STI) sont :
     \begin{itemize}
-        \item des jeunes médécins et
-        \item des étudiants médécins
+        \item des jeunes médecins et
+        \item des étudiants médecins
     \end{itemize}
-    désirant acquerir le savoir-faire de la pose de diagnostic médical.  À la figure \ref{fig:uml_context}, nous illustration cela dans un diagramme de contexte UML.
+    désirant acquérir le savoir-faire de la pose de diagnostic médical.  À la figure \ref{fig:uml_context}, nous illustration cela dans un diagramme de contexte UML.
     
     \begin{figure}[H]
         \centering
@@ -277,21 +282,18 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
     \end{figure}
     
     \paragraph{Caractéristiques de nos utilisateurs} \hfill \\
-    Étant des étudiants médécins ou jeunes médécins, ils seront :
+    Étant des étudiants médecins ou jeunes médecins, ils seront :
     \begin{itemize}
         \item Relativement jeunes. Entre 16 ans et 35 ans,
         \item des deux sexes , homme et femme, ( je voulais un ratio homme/femme ici ... Mais, ah shit, je ne trouve pas de références)
-        \item connaissent les fondamentaux de l'outil informatique et de l'Internet. Par exemple, ils seront ouvrir un site web et le parcourir, reconnaitre et remplir des champs de textes, les valider , ....
+        \item connaissent les fondamentaux de l'outil informatique et de l'Internet. Par exemple, ils seront ouvrir un site web et le parcourir, reconnaître et remplir des champs de textes, les valider , ....
         
-        \item peu expérimentés dans la pose de diagnostic,
-        
-        \item quoi d'autres .... ???? Trop de flemme .
-    
+        \item peu expérimentés en ce qui concerne la pose de diagnostic.
     \end{itemize}
     
     \paragraph{But et environnement} \hfill \\
-    L'objectif principal de nos utilisateurs est d'apprendre à correctement poser un diagnostic, la méthode et les astuces utilisés par des médecins "experts" ( mieux experimentés qu'eux). \\
-    Nous nous situons dans l'environnement Camerounais. Dans lequel, l'apprentissage assisté par ordinateur est à ses débuts. La forme la plus répandue d'apprentissage assisté par ordinateur sont les cours en ligne : MOOCs (Massive Open Online Courses).En général, ce type d'apprendre est assez rigide. Dans ce sens où les cours , les exercices et les examens sont pré enregistrés de facon peu flexible. Un MOOC ne s'adaptera pas aux spécificités d'un apprenant lambda. Nous nous adressons donc à une population qui n'a "jamais" fait usage des STIs.
+    L'objectif principal de nos utilisateurs est d'apprendre à correctement poser un diagnostic, la méthode et les astuces utilisés par des médecins "experts" ( mieux expérimentés qu'eux). \\
+    Nous nous situons dans l'environnement Camerounais. Dans lequel, l'apprentissage assisté par ordinateur est à ses débuts. La forme la plus répandue d'apprentissage assisté par ordinateur sont les cours en ligne : MOOCs (Massive Open Online Courses).En général, ce type d'apprendre est assez rigide. Dans ce sens où les cours , les exercices et les examens sont pré enregistrés de façon peu flexible. Un MOOC ne s'adaptera pas aux spécificités d'un apprenant lambda. Nous nous adressons donc à une population qui n'a "jamais" fait usage des STIs.
     
     \subsubsection{Conception}
     Il s'agit ici de comprendre et spécifier les exigences des utilisateurs, définir les cas d'utilisation.
@@ -374,7 +376,8 @@ Nous avons choisi comme catégorie de stratégie le \textit{Knowledge of perform
         Nous illustrons cela à la figure \ref{fig:apprenant_patient_virtuel}.
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{figures/context-moyens de communication.png}
+            \hspace*{-0.3in}
+            \includegraphics[width=1.1\textwidth]{figures/context-moyens de communication.png}
             \captionsetup{justification=centering}
             \caption{Moyens de communication apprenant-patient virtuel}
             \label{fig:apprenant_patient_virtuel}
@@ -413,7 +416,8 @@ La \autoref{fig:workflow} donne un récapitulatif du workflow du système.
 
 \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{figures/worflow_STI.png}
+        \hspace*{-0.6in}
+        \includegraphics[width=1.2\textwidth]{figures/worflow_STI.png}
         \captionsetup{justification=centering}
         \caption{Workflow du Système}
         \label{fig:workflow}

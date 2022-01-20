@@ -18,6 +18,22 @@
 %    \label{tab:1}
 %\end{table}
 
+\section{Tuteur}
+Dans les STIs, le tuteur joue un rôle très important. Il supervise, oriente et évalue l'apprenant tout au long du processus d'apprentissage. C'est la composante des STI qui implémente l'adaptabilité du système en
+offrant la possibilité d'encadrer chaque apprenant de manière personnalisée à travers des interactions soigneusement élaborées.
+
+Dans notre système, les interactions entre le tuteur et l'apprenant se font selon une approche de \textbf{Coaching}, qui est une méthode d'enseignement dans laquelle le tuteur et l'apprenant collaborent à la construction de solutions \cite{vanlehn1996conceptual}. Dans cette méthode l'interaction apprenant-tuteur s'ajuste en fonction des progrès de l'apprenant. 
+
+Pour être capable de remplir efficacement ses fonctions, le comportement de notre tuteur se base sur des règles tutorielles. Par exemple:
+\begin{itemize}
+    \item Si l'apprenant pose une question pas appropriée, alors l'interpeller et lui rappeler (donner une piste) les types de questions à poser dépendant du contexte.
+    \item Si l'examen demandé par l'apprenant ne cadre pas avec le contexte, alors l'interpeller et l'orienter si nécessaire.
+    \item Si le différentiel proposé par l'apprenant est trop éparse et divergeant, alors l'interpeller et l'orienter si nécessaire.
+\end{itemize}
+
+
+Pour implémenter ces règles nous proposons l'outil \textbf{JESS} (Java Expert System Shell) qui est une API entièrement développée en Java pour la création des systèmes experts à base de règles.
+
 \section{Interface Utilisateur : prototypage}
 
 La conception de notre interface utilisateur étant basée sur la conception centrée sur l'utilisateur, nous présentations dans cette partie la dernière phase de celle ci: L'implémentation.
@@ -29,7 +45,7 @@ Notre choix s'est porté sur l'outil \textbf{Figma}. En effet,
 \begin{itemize}
     \item Figma est un outil de prototypage en ligne avec une fonctionnalité de collaboration en temps réel.
     \item Il n'est pas nécessaire d'enregistrer et d'organiser les fichiers. Le travail est automatiquement enregistré dans un espace partagé dans le Cloud.
-    \item On peut partager tout les prototypes créés en un click.
+    \item On peut partager tout les prototypes créés en un clic.
 \end{itemize}
 
 \subsubsection{Pour les illustrations}
@@ -62,7 +78,7 @@ Nous présentons à la figure \ref{fig:in_connection}  , l'interface qui sera vu
     \centering
     \includegraphics[width=\textwidth]{figures/dashboard-first-connection.png}
         \captionsetup{justification=centering}
-    \caption{Inteface du tableau de bord à la 1ère connexion}
+    \caption{Interface du tableau de bord à la 1ère connexion}
     \label{fig:dashboard_first}
 \end{figure}
 
@@ -72,7 +88,7 @@ Nous présentons à la figure \ref{fig:dashboard} , l'interface qui sera vue par
     \centering
     \includegraphics[width=\textwidth]{figures/dashboard.png}
         \captionsetup{justification=centering}
-    \caption{Inteface du tableau de bord}
+    \caption{Interface du tableau de bord}
     \label{fig:dashboard}
 \end{figure}
 
@@ -82,30 +98,6 @@ Nous présentons à la figure \ref{fig:echange} , l'interface qui sera vue par l
     \centering
     \includegraphics[width=\textwidth]{figures/patient-apprenant.png}
         \captionsetup{justification=centering}
-    \caption{Inteface de l'échange entre l'apprenant et le patient virtuel}
+    \caption{Interface de l'échange entre l'apprenant et le patient virtuel}
     \label{fig:echange}
 \end{figure}
-
-
-
-
-
-\newpage
-
-
-\section{Tuteur}
-
-Dans les STI, le tuteur joue un rôle très important. Il supervise, oriente et évalue l'apprenant tout au long du processus d'apprentissage. C'est la composante des STI qui implémente l'adaptabilité du système en
-offrant la possibilité d'encadrer chaque apprenant de manière personnalisée à travers des interactions soigneusement élaborées.
-
-Dans notre système, les interactions entre le tuteur et l'apprenant se font selon une approche de \textbf{Coaching}, qui est une méthode d'enseignement dans laquelle le tuteur et l'apprenant collaborent à la construction de solutions \cite{vanlehn1996conceptual}. Dans cette méthode l'interaction apprenant-tuteur s'ajuste en fonction des progrès de l'apprenant. 
-
-Pour être capable de remplir efficacement ses fonctions, le comportement de notre tuteur se base sur des règles tutorielles. Par exemple:
-\begin{itemize}
-    \item Si l'apprenant pose une question pas appropriée, alors l'interpeller et lui rappeler (donner une piste) les types de questions à poser dépendant du contexte.
-    \item Si l'examen demandé par l'apprenant ne cadre pas avec le contexte, alors l'interpeller et l'orienter si nécessaire.
-    \item Si le différentiel proposé par l'apprenant est trop éparse et divergeant, alors l'interpeller et l'orienter si nécessaire.
-\end{itemize}
-
-
-Pour implémenter ces règles nous proposons l'outil \textbf{JESS} (Java Expert System Shell) qui est une API entièrement développée en Java pour la création des systèmes experts à base de règles.

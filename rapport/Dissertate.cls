@@ -232,23 +232,23 @@
 	\abstractpage
 	\tableofcontents
 	%\phantomsection
-	\clearpage
+	%\clearpage
 
 	% figure listing - required if you have any figures
-	\phantomsection
+	%\phantomsection
 	\addcontentsline{toc}{chapter}{Liste des figures}
 	\listoffigures	
-	\cleardoublepage
+	%\cleardoublepage
 
 	% table listing - required if you have any tables
-	\phantomsection
+	%\phantomsection
 	\addcontentsline{toc}{chapter}{Liste des tableaux}
 	\listoftables
-	\cleardoublepage
+	%\cleardoublepage
 
 	\acronyms
 
-	\cleardoublepage
+	%\cleardoublepage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
 }
@@ -301,14 +301,14 @@
 }
 
 \newcommand{\acronyms}{
-	\phantomsection
+	%\phantomsection
 	\addcontentsline{toc}{chapter}{Abréviations}
 	\chapter*{Abréviations}
 	\input{frontmatter/abbr.tex}
 }
 
 \newcommand{\abstractpage}{
-	\phantomsection
+	%\phantomsection
 	\setcounter{page}{1}
 	\addcontentsline{toc}{chapter}{Résumé}
 	\chapter*{Résumé}
