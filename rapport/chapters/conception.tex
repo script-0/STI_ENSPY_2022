@@ -12,13 +12,14 @@ Dans cette section, nous faisons une présentation détaillée des composantes d
 
 
     \subsection{Modèle Apprenant}   
- Le modèle de l'apprenant permet de décrire et de suivre la trace de l'évolution de l'apprentissage de l'apprenant, son niveau, ses lacunes, ses idées fausses, etc. Les données du modèle de l'apprenant sont mises à jour à partir des informations obtenues suite à ses décisions et ses actions dans le jeu.
+ Le modèle de l'apprenant permet de décrire et de suivre la trace de l'évolution de l'apprentissage de l'apprenant, son niveau, ses lacunes, ses idées fausses, etc. Les données du modèle de l'apprenant sont mises à jour à partir des informations obtenues suite à ses décisions et ses actions au cours d'un partie.
  
-  Dans PartientVirtuel, le modèle de l'apprenant sera, à terme, constitué des composantes suivantes :
+  Dans SARAH, le modèle de l'apprenant sera, à terme, constitué des composantes suivantes :
  
 \begin{enumerate}
 \item  \textbf{Le Modèle Statique}, contenant des données statiques sur l'apprenant (nom, âge, type d 'apprenant,niveau scolaire, spécialité,  etc.).
-\item  \textbf{Le Modèle des Connaissances}, contenant les connaissances de l'apprenant.\\\
+\item  \textbf{Le Modèle cognitif} :  cette partie contient des informations sur l'état des connaissances de l'étudiant par rapport i la matière considérés (par exemple, les problèmes qu'il a résolus,
+ses solutions, son niveau maîtrisé de la connaissances, etc..).\\\
 
 Nous avons choisi le modèle de recouvrement ( Overlay) ( Carr et Goldstein, 1977) pour la représentation des connaissances de l'apprenant dans notre système. Dans ce modèle, les connaissances de l'apprenant sont construites sur les éléments de connaissance de l'expert (ou éléments de connaissance du domaine considéré) . Dans cette approche, les compétences indiquent clairement l'habileté de l'apprenant à utiliser ses connaissances. Cette méthode s'est avérée être un choix judicieux et adapté au contexte, car toutes les compétences à acquérir sont définies de manière intrinsèque et sans ambiguïté par les connaissances du domaine. La figure 3.2 présente le modèle Overlay. 
 
@@ -33,14 +34,18 @@ Nous avons choisi le modèle de recouvrement ( Overlay) ( Carr et Goldstein, 197
 
 \item  \textbf{Le Modèle des compétences}, contenant les croyances du système sur les compétences de l'apprenant. 
 \item \textbf{Le Modèle Psychométrique}, contenant les informations permettant d'initialiser le modèle de l'apprenant en début de partie.
-\item \textbf{Le Modèle Statistique}, contenant la trace d 'activités de 1 'apprenant dans le jeu (actions, temps écoulé, etc.).
 \item \textbf{Le Modèle Psychologique}, contenant les informations permettant de décrire les comportements et les processus mentaux de l'apprenant au fil des parties de jeu. 
-\item \textbf{Le Modèle Affectif},ce modèle est un ensemble de données permettant de cerner les caractéristiques et les différentes facettes d'un étudiant. Il contient des connaissances relatives aux caractéristiques particulières permanentes ou momentanées de l'apprenant (ceci n'est pas disponible dans l'état actuel de notre modèle). 
-\item \textbf{Modèle d'inférences}: Pour nous, ce modèle contient les informations sur les modes d'inférences que l'apprenant applique dans son raisonnement (par exemple les modes de
-raisonnement (inductif ou déductive que l'étudiant utilise dans ses résolutions de
-problèmes) [Shiri, 1997.
+\item \textbf{Le Modèle Affectif},ce modèle est un ensemble de données permettant de cerner les caractéristiques et les différentes facettes d'un étudiant. Il contient des connaissances relatives aux caractéristiques particulières permanentes ou momentanées de l'apprenant.
+\item \textbf{Modèle d'inférences}: Pour nous, ce modèle contient les informations sur les modes d'inférences que l'apprenant applique dans son raisonnement (par exemple les modes inductif ou déductive que l'étudiant utilise dans ses résolutions de problèmes) [Shiri, 1997].
 \item \textbf{Modeleur} : Le Modeleur a pour objectif de mettre à jour les connaissances de l'apprenant (gestion du modèle de l'apprenant); reconnaître ses bonnes performances; relever les connaissances erronées et suggérer des corrections. La Figure 3.2 illustre l'architecture du modèle de l'apprenant. Dans cette figure la notion « le comportement de l'apprenant )) inclue ses réponses aux questions. ses actions (comme la tâche d'adaptation). et les résultats de ces actions comme les solutions obtenues, etc.
 \end{enumerate}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{figures/mod_app.png}
+    \captionsetup{justification=centering}
+    \caption{ Modèle de l'apprenant }
+ \label{fig:m_app}
+\end{figure}
 \begin{figure}
     \centering
     \includegraphics[width=0.75\textwidth]{figures/md_inf.png}
@@ -56,16 +61,16 @@ Nous pensons que le sous-système modeleur est celui qui contient au moins les
 caractéristiques suivantes :
 
 \begin{enumerate}
+\item la capacité de reconnaître les bonnes performances de l'apprenant (par exemple son niveau maîtrisé de la connaissance);
+\item la capacité de relever les connaissances erronées;
+\item la capacité de les expliquer (par exemple, informer l'apprenant s'il a choisi un cas inadéquat pour la résolution du problème donné. etc.);
+\item  la capacité de suggérer des corrections (par exemple montrer les relations entre le problème courant et les problèmes similaires que l'apprenant a déjà résolus, etc.);
 \item La capacité de mettre à jour les connaissances de l'apprenant; il doit être capable de  : \begin{itemize}
 \item fixer l'ensemble des étapes à maîtriser par l'apprenant (par exemple; déterminer
 tous les problèmes résolus);
 \item découvrir les étapes maîtrisées mais non exprimées par l'apprenant (par exemple, découvrir les relations entre un problème résolu et le cas qu'il r choisi à cette fin);
-\item découvrir les étapes sous-jacentes non maîtrisées (lacunes de l'apprenant; par exemple déterminer tous les problèmes non résolus);
+\item découvrir les étapes sous-jacentes non maîtrisées (lacunes de l'apprenant; par exemple déterminer tous les problèmes non résolus).
 \end{itemize}
-\item la capacité de reconnaître les bonnes performances de l'apprenant (par exemple son niveau maîtrisé de la connaissance);
-\item la capacité de relever les connaissances erronées;
-\item la capacité de les expliquer (par exemple, informer l'apprenant s'il a choisi un cas inadéquat pour la résolution du problème donné. etc.);
-\item  la capacité de suggérer des corrections (par exemple montrer les relations entre le problème courant et les problèmes similaires que l'apprenant a déjà résolus, etc.). 
 \end{enumerate}
 
 
@@ -73,13 +78,15 @@ tous les problèmes résolus);
 l'apprenant }
 Le problème est de déterminer une démarche permettant d'analyser le raisonnement de
 l'apprenant dans un contexte de résolution de problèmes. L'analyse du raisonnement
-consiste à concilier essentiellement les modèles mentaux de l'apprenant [VanLehn, 1981.Nous nous proposons d'établir donc, un formalisme nous permettant de reconnaître et de regrouper les actions et les solutions de ce dernier en situation de résolution de problèmes. Ce formalisme nous permet également d'analyser la solution de l'apprenant plus en profondeur pour reconnaître son raisonnement. L'interprétation des résultats obtenus (Ion de cette analyse) est une partie importante dans notre approche, puisque ces résultats sont précisément ceux qui sont recherchés et peuvent être utilisés pour modéliser les connaissances, les erreurs et les incompréhensions de l'apprenant; vérifier la cohérence de son travail et la solution qu'il propose. 
+consiste à concilier essentiellement les modèles mentaux de l'apprenant [VanLehn, 1981.Nous nous proposons d'établir donc, un formalisme nous permettant de reconnaître et de regrouper les actions et les solutions de ce dernier en situation de résolution de problèmes. Ce formalisme nous permet également d'analyser la solution de l'apprenant plus en profondeur pour reconnaître son raisonnement. L'interprétation des résultats obtenus (Ion de cette analyse) est une partie importante dans notre approche, puisque ces résultats sont précisément ceux qui sont recherchés et peuvent être utilisés pour modéliser les connaissances, les erreurs et les incompréhensions de l'apprenant; vérifier la cohérence de son travail et la solution qu'il propose. \\\
 
-\subsubsectionautorefname{Modes d'interaction}
+
+\textbf{Modes d'interaction} \\\
+
 Nous identifions deux modes d'interaction pour notre approche :
 AS mode (Accessible Solution mode) et US mode (Inaccessible Solution mode). \\\
 \begin{enumerate}
-\item \textbf{AS mode} (mode de solution accessible). Dans ce mode, la base de cas est accessible par l'apprenant [Shiri et al...1998b]. Pour chaque problème donné. l'apprenant cherche dans la base de cas ceux qui sont similaires au problème courant. Ensuite pour le cas trouve, il effectue les processus d'adaptation afin d'atteindre la solution du problème.
+\item \textbf{AS mode} (mode de solution accessible). Dans ce mode, la base de cas est accessible par l'apprenant [Shiri et al...1998]. Pour chaque problème donné. l'apprenant cherche dans la base de cas ceux qui sont similaires au problème courant. Ensuite pour le cas trouve, il effectue les processus d'adaptation afin d'atteindre la solution du problème.
 La façon la plus simple pour illustrer cela, est de ramener les lecteurs aux cours de calculs ou de probabilité. Devant un nouveau problème, l'étudiant feuillette son livre et ses notes de cours afin de trouver un problème semblable dont il savait déjà la  solution. En répétant l'ensemble des étapes utilisées dans cette solution. l'étudiant pourrait résoudre le nouveau problème.
 Cinq mécanismes sont particulièrement importants dans le processus de modélisation
 des connaissances de l'apprenant :\\\
@@ -92,59 +99,6 @@ Pour que notre système puisse mener à bien la modélisation de l'apprenant dan
 \item \textbf{US mode} (mode de solution inaccessible). Dans ce mode (plus complexe), la base de cas n'est pas accessible. L'apprenant sans voir donc les solutions des cas, résoudra le problème en adaptant la (les) solution(s) d'un (ou des) cas similaire(s) qu'il a déjà résolu(s). Plus précisément, en se rappelant les étapes de la solution d'un cas similaire, ensuite en partant sur ces informations et en établissant une analogie avec la nouvelle situation, il peut résoudre ce problème. Il proposera ensuite, son raisonnement au système. Le système analysera ses réponses pour comprendre son raisonnement [Shiri et al.. 1998].
 \end{enumerate}
 \\\
-
-Après la modélisation du domaine d'application, nous présentons ici la modélisation de l'apprenant dans PartientVirtuel.
- En nous basant sur la littérature, nous avions le choix entre plusieurs méthodes de modélisation de l'apprenant dans un STI : réseaux sémantiques, banque de connaissances de l'expert , réseaux bayésiens, etc. Les ressources disponibles, le temps dont nous disposions pour produire le prototype, et les contraintes propres à l'outil que nous développons nous ont orienté vers le choix d'un réseau bayésien pour modéliser les connaissances et les compétences de l'apprenant même si l'une des grandes difficultés attendues était l'absence de banque de données que nous pouvions exploiter pour construire la structure du réseau. Grâce à un travail méthodique et à l'aide des experts nous sommes parvenu à créer une structure de réseau fiable que nous avons implémentée dans notre prototype, et que nous présentons dans la suite, après avoir défini ce qu'est un réseau bayésien.
- 
- 
- 
- Les réseaux bayésiens pour la modélisation de l'apprenant
-
-PartientVirtuel est un système qui doit être capable d'adapter le processus d'apprentissage à chaque apprenant. Rendre possible cette adaptabilité requiert un modèle du domaine d'une part, et un modèle apprenant pour chaque joueur d'autre part, afin d 'offrir un soutien personnalisé (Le et Pinkwart, 2015). L'un des problèmes que l'on rencontre lors de la modélisation de l'apprenant est l'incertitude dans les croyances que le système a des connaissances de l'apprenant, et les sources d'incertitude sont nombreuses. En effet un apprenant peut commettre une erreur au courant du processus de résolution d 'un problème pourtant il possède les connaissances et les compétences pour réussir, ou encore parvenir à construire un schéma valide de résolution de manière tout à fait hasardeuse (D Baker et al., 2008) . Notre choix d 'utiliser les réseaux bayésiens pour modéliser l'apprenant devient alors judicieux, puisqu'ils offrent des mécanismes permettant de gérer l'incertitude (Woolf, 2010). 
-
-Un réseau bayésien est un graphe orienté dans lequel chaque nœud est annoté avec des informations quantitatives de probabilité, et dont la spécification est la suivante (Russell et Norvig, 2010) :
-\begin{enumerate}
-\item Chaque nœud correspond à une variable aléatoire qui peut être discrète ou continue.
-\item  Les paires de nœuds sont connectées par un ensemble de liens orientés. Un nœud X est dit parent d'un nœud Y s'il existe un lien orienté partant du nœud X vers le nœud Y. Le graphe décrit par le réseau bayésien est direct et acyclique (ne contient pas de cycles orientés).
-\item  Chaque nœud Xi possède une distribution de probabilités P(Xi 1 Parents( Xi)) qui quantifie l'effet des parents sur le nœud. Pour les variables discrètes, cette distribution de probabilités est représentée par une table. 
-\end{enumerate}
- 
-
-La construction d 'un réseau bayésien se fait généralement en trois étapes (Le et Pinkwart, 2015) : 
-\begin{enumerate}
-\item  Définir la structure du réseau bayésien (sa topologie). 
-\item  Initialiser 1 s valeurs des nœuds du réseau avec une estimation des connaissances et des compétences de l'apprenant. Cette étape influence grandement la manière dont 1 rés au st mis à jour pour refléter la progression de ce dernier.
-\item Mettre à jour 1 s probabilités dans le réseau bayésien en utilisant les informations tirées des interactions entre l'apprenant et le système.
-\end{enumerate}
-
-La mise en œuvre de ces trois étapes peut se faire suivant trois méthodes : 
-\begin{itemize}
-\item A partir des connaissances du domaine ou des données existantes sur le domaine. La tâche consiste à correctement identifier les objectifs de la modélisation (prédiction, explication ou exploration), identifier toutes les observations pertinentes pour le problème, déterminer lesquelles de ses observations seront représentées dans le modèle, définir à partir de ces observations, des variables ayant des états finis et mutuellement exclusifs, puis déterminer la distribution de probabilité pertinente pour le modèle (Heckerman, 2008).
-\item  En sollicitant la collaboration des experts du domaine. Il s'agit de se fier aux experts du domaine pour accomplir les tâches listées au point précédent. Seulement, s'appuyer sur le jugement d'experts est coûteux et peut être uj et à l'erreur, car il est difficile pour un humain de se fier à son intuition pour définir des dépendances probabilités réalistes entre des concepts. ( Conati, 2010) 
-\item Une combinaison des deux premières méthodes.
-\end{itemize}
-
- La modélisation de l'apprenant à l'aide d 'un réseau bayésien consiste donc en un ensemble de nœuds représentant les variables associées au processus d 'apprentissage (connaissance, compétence, évidence, et c.), et d 'arcs représentant les relations entre ces nœuds qui peuvent être de deux types (Le et Pinkwart, 20 15) : 
- 
-\begin{enumerate}
-\item Relation entre une compétence et une unité de connaissance;
-\item Relation entre une unité de connaissance et un nœud d'évidence. Les nœuds d'évidence sont ceux qu'on appelle des événements d'apprentissage et représentent les nœuds observables du réseau. Dans Prat'Sécuritaires par exemple, les nœuds observables caractérisent les actions que l'apprenant peut effectuer dans l'environnement de jeu vidéo. La figure 3.7 (Le et Pinkwart , 2015)  donne un exemple de réseau bayésien illustrant les deux types de relations énoncés dans le paragraphe précédent.\\\
-\end{enumerate}
-
-Les relations de causalité entre les nœuds du réseau bayésien ci-dessus peuvent être interprétées comme suit : Si le problème Pl est résolu, l'apprenant a probablement acquis les connaissances Kl, K2 et K3. Si les connaissances Kl et K2 ont été acquises, l'apprenant possède probablement la compétence C l. Si les connaissances K2 et K3 ont été acquises, l'apprenant possède probablement la compétence C2. 
-
-Considérons les nœuds suivant d'un réseau bayésien : un problème P, une connaissance et une compétence C. La relation entre deux nœuds quelconques du réseau peut être exploitée dans les deux sens (Brusilovsky et Millan 2007) : 
-\begin{itemize}
-\item Le sens causal, (K→ P) ou (K → C); 
-\item Le sens du diagnostic, ( P → K) ou ( C →K). 
-\end{itemize}
-
-Ce qui conduit à l'interprétation suivante dans le cas de modélisation de la relation entre une compétence et une connaissance (Le et Pinkwart, 2015) 
-\begin{itemize}
-\item  (K → C) : posséder la connaissance K indique la possibilité de posséder la compétence C;
-\item ( C →K ) : posséder la compétence C signifie posséder la connaissance associée J-(. Ici, le nœud K peut être utilisé pour évaluer l 'approche de résolution de l'apprenant.  
-\end{itemize}
-
 
     \subsection{Modèle Tuteur}
 
