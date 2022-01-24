@@ -16,12 +16,12 @@ C'est la méthode par laquelle les professionnels de la santé identifient une m
 Il existe plusieurs méthodes de diagnostic médical. Toutes ces méthodes s'appuient en général sur ces deux composants:
 \begin{itemize}
     \item Le recueil des données. Il s'agit de prendre en compte toutes les données nécessaires à l'établissement d'un diagnostic. Il s'agit notamment des antécédents, des signes et symptômes exprimés par le patient, des paramètres, des examens médicaux.
-    \item L'analyse des données recueillies.\end{itemize}
+    \item L'analyse des données recueillies.
+\end{itemize}
 
 Plusieurs méthodes et techniques sont employées dans une procédure de diagnostic médical:
 
-\subsubsection{Le diagnostic différentiel} \footnote{"Differentiel diagnosis", \textit{Merriam-Webster}, Medical Dictionnary} \footnote{"THe patient history: evidence-based approach To Differential Diagnosis", \textit{Siegenthaler, Walter}, 2011, NY-McGraw Hill}
-
+\subsubsection{Le diagnostic différentiel} 
 Cette méthode est basée sur la recherche des différentes maladies possibles à la cause des symptômes exprimés par le patient, suivi par une phase d'élimination à partir des différents tests médicaux et autres données additionnelles. L'objectif est de déterminer à la fin la maladie la plus probable. Cette méthode est souvent appliquée avec l'aide de système automatiques d'aide au diagnostic.
 
 En général, des tests de confirmation sont utilisés après l'identification de la maladie la plus probable, comme les tests d'imagerie médicale, pour confirmer le diagnostic.
@@ -159,58 +159,36 @@ feedback approprié selon le contexte et met à jour son modèle (modèle de l'a
 
 
 \subsubsection{Le module Apprenant}
-\textbf{1. Les approches de modélisation de l'apprenant} \\\
+
+\paragraph{A. Les approches de modélisation de l'apprenant} \mbox{}\\
 Parmi les techniques de modélisation connues. nous pouvons citer :
-\begin{itemize}
-\item \textbf{Modèle de Recouvrement} \\\
-La première approche consiste à construire le modèle de l'apprenant de façon
-comparative. Les performances de celui-ci sont comparées à un modèle idéal qui
-représente les connaissances d'un expert de la matière enseignée. Carr et Goldstein (1977) appellent cette technique. la méthode de recouvrement des connaissances de l'étudiant « overlay mode1 ». Le modèle de l'apprenant est alors considéré comme un sous ensemble du modèle idéal.
-Les connaissances de l'apprenant sont alors considérés comme formant un sous-ensemble des connaissances de l'expert. Le modèle de l'apprenant est alors mis à jour en le comparant au modèle de l'expert. Chaque fois que le modèle de l'apprenant diffère du modèle de celui de l'expert du domaine, le système identifie une erreur ou une idée fausse de l'apprenant.
- La figure 3.1 présente les deux variantes du modèle superposition ( Overlay) : 
- \begin{itemize}
-\item une variante dans laquelle les connaissances de l'apprenant sont entièrement incluses dans celles de l'expert (a),
-\item une variante dans laquelle sont stockées les informations sur les conceptions erronées de l'apprenant (b).
-\end{itemize}
- La deuxième variante permet une meilleure planification des interventions du système dans le processus d'apprentissage. 
+\begin{description}
+    \item[Modèle de Recouvrement] La première approche consiste à construire le modèle de l'apprenant de façon comparative. Les performances de celui-ci sont comparées à un modèle idéal qui représente les connaissances d'un expert de la matière enseignée. Carr et Goldstein (1977) appellent cette technique: la méthode de recouvrement des connaissances de l'étudiant « Overlay Mode1 ». Le modèle de l'apprenant est alors considéré comme un sous ensemble du modèle idéal. Les connaissances de l'apprenant sont alors considérés comme formant un sous-ensemble des connaissances de l'expert. Le modèle de l'apprenant est alors mis à jour en le comparant au modèle de l'expert. Chaque fois que le modèle de l'apprenant diffère du modèle de celui de l'expert du domaine, le système identifie une erreur ou une idée fausse de l'apprenant. La figure 3.1 présente les deux variantes du modèle superposition ( Overlay).
+    
+    \begin{itemize}
+        \item une variante dans laquelle les connaissances de l'apprenant sont entièrement incluses dans celles de l'expert (a),
+        \item une variante dans laquelle sont stockées les informations sur les conceptions erronées de l'apprenant (b).
+    \end{itemize}
  
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{figures/mdele.png}
-    \captionsetup{justification=centering}
-    \caption{Les variantes du modèle}
-\end{figure}
-
-Il existe plusieurs approches permettant de d'implémenter les superpositions :
+    La deuxième variante permet une meilleure planification des interventions du système dans le processus d'apprentissage. 
  
-\begin{itemize}
-\item Réseau sémantique. les nœuds et liens sont ajoutés au fur et à mesure que les concepts sont appris par l' étudiant ; 
-\item Banque de connaissance de l’expert :  Annoter des déviations que l'on découvre au fur et à mesure de l'interaction avec l'apprenant. 
-Ensemble des compétences acquises par l 'étudiant.  Les compétences sont construites sur les éléments de connaissance du domaine. Elles indiquent clairement l'habileté de l'apprenant à utiliser cette connaissance. 
-\item Réseau bayésien. Chaque nœud du réseau a une valeur aléatoire qui indique la probabilité que l'apprenant connaisse l'élément de connaissance. ance concerné. Il permet un raisonnement probabiliste sur l'état des connaissances de l'apprenant, en tenant compte des observations notées lors de ses interactions avec le tuteur.
-\end{itemize}
-\item \textbf{Modèle Correctionnel} \\\
-D'autres STI représentent non seulement les concepts manquants. mais également certaines incompréhensions de l'étudiant a l'aide d'une librairie d'erreurs. Ce type de modèle est appelé modèle correctionnel [Burton et Brown, 19761. Dans ce cas, le modèle de l'apprenant n'est pas un sous-ensemble du modèle idéal, mais plutôt un ensemble de règles qui représentent les connaissances (correctes et incorrectes) du domaine. Ainsi, les conceptions erronées de l'apprenant deviennent une variante de ces règles [Sleeman et Brown, 19821. Du même coup. le cheminement du raisonnement de l'apprenant est modélisé par des règles de production qui prennent en compte les conceptions erronées.
-\item \textbf{Modèle de Reconstruction} \\\
-Quelques STI se sont également intéressés a la détection des erreun en utilisant une
-méthodologie basée sur la reconstruction des erreurs plutôt qu'à partir d'une liste d'erreurs
-prédéfinie dans une librairie. Dans ce cas, le module de diagnostic utilise deux librairies :
-une librairie de prédicats et une librairie d'actions. Dans la théorie de réparation, les
-erreurs sont générées en altérant un groupe de règles adéquates pour créer une situation
-OU aucune règle ne s'applique (Le. « impasse D) [Brown et VanLehn. 19801 [Burton et
-Brown, 19761. Une réparation est une action qui consiste a contourner une impasse.
-\item \textbf{L'approche de Goldstein (Graphe génétique)} \\\
-Goldstein (1982) introduit l'idée de modélisation des connaissances de l'apprenant par
-l'intermédiaire d'un graphe génétique (Figure 2.2) représentant les relations d'analogie, de
-généralisation-spécialisation, de raffinement-simplification et de déviation-correction.
-Le graphe génétique [Goldstein. 19821 offre une représentation des connaissances
-procédurales. Les règles d'une procédure sont représentées comme des nœuds, et les liens
-représentent les relations entre les règles. Ces liens peuvent être de plusieurs types (généralisation/spécialisation, analogie, raffinement).\\\
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.9\textwidth]{figures/mdele.png}
+        \captionsetup{justification=centering}
+        \caption{Les variantes du modèle : pris dans \cite{nkambou2010advances}}
+    \end{figure}
+  \end{description}
+\begin{description}
+    \item[Modèle Correctionnel] D'autres STI représentent non seulement les concepts manquants. mais également certaines incompréhensions de l'étudiant a l'aide d'une librairie d'erreurs. Ce type de modèle est appelé modèle correctionnel. Dans ce cas, le modèle de l'apprenant n'est pas un sous-ensemble du modèle idéal, mais plutôt un ensemble de règles qui représentent les connaissances (correctes et incorrectes) du domaine. Ainsi, les conceptions erronées de l'apprenant deviennent une variante de ces règles. Du même coup. le cheminement du raisonnement de l'apprenant est modélisé par des règles de production qui prennent en compte les conceptions erronées.
+    
+    \item[Modèle de Reconstruction] Quelques STI se sont également intéressés a la détection des erreur en utilisant une méthodologie basée sur la reconstruction des erreurs plutôt qu'à partir d'une liste d'erreurs prédéfinie dans une librairie. Dans ce cas, le module de diagnostic utilise deux librairies : une librairie de prédicats et une librairie d'actions. Dans la théorie de réparation, les erreurs sont générées en altérant un groupe de règles adéquates pour créer une situation ou aucune règle ne s'applique L'impasse. Une réparation est une action qui consiste a contourner une impasse.
+    
+    \item[L'approche de Goldstein (Graphe génétique):] Goldstein (1982) introduit l'idée de modélisation des connaissances de l'apprenant par l'intermédiaire d'un graphe génétique représentant les relations d'analogie, de généralisation-spécialisation, de raffinement-simplification et de déviation-correction.
+    Le graphe génétique [Goldstein. 19821 offre une représentation des connaissances procédurales. Les règles d'une procédure sont représentées comme des nœuds, et les liens représentent les relations entre les règles. Ces liens peuvent être de plusieurs types (généralisation/spécialisation, analogie, raffinement).
+\end{description}
 
-\end{itemize}
-\\\ 
-
-\textbf{2. Composants du modèle de l'apprenant} \\\
+\paragraph{B. Composants du modèle de l'apprenant}\mbox{}\\
 Le modèle de apprenant est une représentation dans le STI de l'état de l'apprenant (cognitif, affectif, psychologique, etc.) établi suivant un processus qui
 s'apparente au diagnostic médical. Ce module est consulté périodiquement par le
 tuteur et l'expert pour déterminer l'aspect de la formation.
@@ -221,34 +199,45 @@ tuteur et l'expert pour déterminer l'aspect de la formation.
     \item modèle inférentiel 
 \end{itemize}
 
-\begin{enumerate}
-    \item \textbf{Le modèle affectif} :  ce modèle est un ensemble de données permettant de cerner la personnalité et les différentes facettes d'un étudiant. Il contient des connaissances relatives aux caractéristiques particulières permanentes ou momentanées de l'apprenant. parmi celles-ci, nous avons :
-    
-\begin{itemize}
-\item  les connaissances relatives aux conditions mentales. par exemple l'apprenant est
-			spatial ou verbal, il est réfléchi ou impulsif, etc.;
-\item les connaissances relatives aux sentiments et à la personnalité. par exemple
-			l'apprenant est calme ou anxieux. il est attentif ou distrait. etc. \\\
-\end{itemize}
-Ces informations varient avec le contexte et sont utilisées par le système pour adapter les interactions avec l'apprenant (sélection et séquencement du contenu à présenter, choix du mode de communication , choix de l'approche pédagogique, etc.).
-    \item \textbf{Le modèle inférentiel} : permet au système de faire un diagnostic de l'état de l'apprenant servant à déterminer les causes des erreurs afin
-de les corriger. Le diagnostic de l'état de l'apprenant peut se faire suivant deux
-approches : 
+\begin{description}
+    \item[Le modèle affectif:]  ce modèle est un ensemble de données permettant de cerner la personnalité et les différentes facettes d'un étudiant. Il contient des connaissances relatives aux caractéristiques particulières permanentes ou momentanées de l'apprenant. parmi celles-ci, nous avons :
+    \begin{itemize}
+        \item  les connaissances relatives aux conditions mentales. par exemple l'apprenant est	spatial ou verbal, il est réfléchi ou impulsif, etc.;
+        \item les connaissances relatives aux sentiments et à la personnalité. par exemple l'apprenant est calme ou anxieux. il est attentif ou distrait. etc.
+    \end{itemize}
+\end{description}
+    Ces informations varient avec le contexte et sont utilisées par le système pour adapter les interactions avec l'apprenant (sélection et séquencement du contenu à présenter, choix du mode de communication , choix de l'approche pédagogique, etc.).
+\begin{description}
+    \item[Le modèle inférentiel:] permet au système de faire un diagnostic de l'état de l'apprenant servant à déterminer les causes des erreurs afin de les corriger. Le diagnostic de l'état de l'apprenant peut se faire suivant deux approches : 
     \begin{itemize}
         \item Le « Model Tracing » . Le système crée et analyse la trace des activités de l'apprenant. Cette approche nécessite une bonne modélisation du processus de résolution de problèmes dans le système. 
         \item Le « Knowledge Tracing» . Le système analyse un épisode d 'apprentissage afin d 'identifier les connaissances qui ont été utilisées par l'apprenant. Cette approche ne nécessite pas une modélisation complexe du processus de résolution . 
     \end{itemize}
-
-    \item \textbf{Le modèle cognitif} :  cette partie contient des informations sur l'état des connaissances de l'apprenant par rapport à la matière considérée. Ces informations portent sur : \\\
+\end{description}
+\begin{description}
+    \item[Le modèle cognitif:]  cette partie contient des informations sur l'état des connaissances de l'apprenant par rapport à la matière considérée. Ces informations portent sur :
     \begin{itemize}
         \item \textbf{les capacités} : l'information sur les capacités traduit le niveau de l'étudiant par rapport aux connaissances. Robert M. Gagne (1976) a classifié les capacités apprises en cinq catégories : les informations verbales, les habiletés intellectuelles, les attitudes, les habiletés motrices et les stratégies cognitives.
         \item \textbf{les objectifs}  : l'information sur les objectifs traduit le fait que l'étudiant a déjà réalisé ou non un objectif. Par exemple, l'étudiant en médecine a acquis le savoir faire d'une technique de repérage de la plaque dentaire.
         \item \textbf{les ressources} :l'information sur les ressources (exercices, problèmes. tests. simulations, démonstration, etc.) traduit le fait qu'une ressource a déjà été utilisée par un apprenant, et le contexte dans lequel cette ressource a été utilisée.
         \item \textbf{et éventuellement les relations} : l'information sur les relations traduit le fait que l'étudiant a réussi ou pas à établir une relation (par exemple : de type analogie,abstraction, cas particulier, etc.) entre deux connaissances (et donc, la connaissance
-d'une relation entre deux connaissances est aussi une connaissance (métaconnaissance)). 
+d'une relation entre deux connaissances est aussi une connaissance (méta-connaissance)). 
     \end{itemize}
-\end{enumerate}
+\end{description}
 
+\paragraph{C. Méthodes de reconnaissance des émotions}\mbox{}\\
+On distingue principalement quatre méthodes de reconnaissance des émotions dans les STI, à
+savoir : l‘auto-évaluation, les juges externes, les variables d‘interaction et les senseurs
+physiques.\cite{jraidi_2013}
+\begin{description}
+    \item[L’auto-évaluation] Dans les techniques d‘auto-évaluation(« self-report »), l‘apprenant doit indiquer lui-même ses émotions pendant son interaction avec le système. Des questionnaires à choix multiples et des échelles de mesure peuvent être utilisés pour restreindre le choix de réponses de l‘apprenant. L‘auto-évaluation est une méthode rapide à administrer et facile à implanter dans les STI, mais elle présente plusieurs inconvénients. En effet, cette approche directe perturbe la dynamique de la session d‘apprentissage, car elle nécessite d‘interrompre fréquemment l‘apprenant pour l‘interroger sur ses émotions, afin d‘avoir une mise à jour régulière de son état. L‘auto-évaluation peut donc détériorer la qualité de l‘interaction et le rendement de l‘apprenant.
+    \item[Les juges externes] Cette méthode a recours à des observateurs humains experts (enseignants, pédagogues ou psychologues), qui doivent suivre le déroulement de la séance d‘apprentissage, évaluer, et annoter l‘état émotionnel de l‘apprenant. Cette évaluation peut se faire en même temps, pendant l‘interaction, ou à posteriori en visionnant l‘enregistrement vidéo de la session. Cette méthode est cependant très  et reste difficile à mettre en œuvre étant donnée la nécessité de faire mobiliser des ressources humaines supplémentaires.
+    \item[Les variables d’interaction]
+    Différentes variables de l‘interaction entre l‘apprenant et le système tutoriel peuvent être utilisées pour la détection des émotions. Ces variables incluent notamment : le temps passé sur les activités, les fréquences d‘utilisation des boutons d‘aide ou les performances de l‘apprenant (capacité de mémorisation, scores obtenus dans des tests ou des exercices, temps de réponse, etc.). Par exemple, Beck (2005) et de Vicente et al. (2002), utilisent le temps de réponse et le nombre d‘erreurs commises pour évaluer le niveau d‘attention de l‘apprenant. Baker et al. (2004, 2006) analysent les fréquences de clics sur les boutons d‘aide et le temps passé sur les activités pour détecter un comportement spécifique où l‘apprenant tente de déjouer le système (« gaming the system »), en essayant de profiter des régularités de l‘interface pour passer rapidement au travers du curriculum en faisant le minimum d‘effort possible, sans vraiment être impliqué dans les activités d‘apprentissage.
+    \item[Les senseurs physiques] Les senseurs physiques permettent de détecter des patrons de changements corporels associés aux émotions, en mesurant des caractéristiques observables telles que les expressions faciales, la voix, la posture ou les mouvements corporels. Avec le développement des équipements et des capteurs non-intrusifs et à faibles coûts, l‘utilisation de ces senseurs est devenue de plus en plus courante dans les IHM, et plus particulièrement dans les STI.
+
+    
+\end{description}
  
 \subsubsection{L'interface utilisateur}
 L'interface utilisateur est la composante qui contrôle les interactions entre l'apprenant et le système. Elle sert de traducteur bilatéral entre la représentation interne du système et le langage d 'interface compréhensible à l' apprenant \cite{nwana}. La conception de l'interface utilisateur est une étape très importante du processus de développement d 'un STI. En effet la qualité d 'une interface peut affecter positivement ou négativement la perception que l'apprenant des interactions avec le système.  Étant donné que l'interface utilisateur est la forme finale sous laquelle le STI se présente à l'apprenant, les caractéristiques telles que la facilité d'utilisation et l'attrait pourraient avoir un impact décisif sur l'envie de l'apprenant d 'utiliser le système ou non \cite{nwana} .  Les interfaces utilisateur des STIs peuvent se présenter sous différents aspects selon le type d 'apprentissage (simulation, résolution de problèmes, etc.), la nature des données échangées (commandes, voix, etc.) entre l'apprenant et le système, le domaine de l'apprentissage (pratiques sécuritaires en situation d 'urgence , mathématiques, etc.), ou encore l'objectif visé par l'apprentissage (partage d 'expérience, transfert de compétences, etc.). 
@@ -297,7 +286,7 @@ Medical Exam Tutor est une solution commercialisée d enseignement des connaissa
     \item Ses simulation de cas de maladie basées sur des données réelles
     \item Des données d'examens médicaux réalistes comme les scanners
     \item Des cas dans diverses spécialités médicales
-    \item Les feedbacks instantanés lors des sessions d'apprentissage et de test
+    \item Les feedback instantanés lors des sessions d'apprentissage et de test
 \end{itemize}
 
 \subsubsection{Chois d'un cas}
@@ -328,8 +317,8 @@ L'apprenant a accès aux informations d'un patient. Les figures suivantes nous m
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{figures/met/exam.png}
-    \captionsetup{justification=centering}
     \caption{Examen d'un patient}
+    \captionsetup{justification=centering}
 \end{figure}
 
 \subsubsection{Limites}

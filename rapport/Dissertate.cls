@@ -9,7 +9,7 @@
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{Dissertate}[Dissertate Class]
-\LoadClass[12pt, twoside, openright, a4paper]{book}
+\LoadClass[12pt, twoside, openany, openright, a4paper]{book}
 
 %
 % Options
@@ -61,7 +61,7 @@
     {\endoldenumerate\end{spacing}}
 
 % Text layout.
-\RequirePackage[right=0.9in,left=0.9in,bottom=1.6in,top=0.8in,twoside, a4paper]{geometry}
+\RequirePackage[right=0.9in,left=0.9in,bottom=1.6in,top=0.8in,oneside, a4paper]{geometry}
 \usepackage{ragged2e}
 \usepackage{indentfirst}
 \usepackage[french]{babel}
@@ -222,7 +222,6 @@
     urlcolor=black,
 }
 
-
 \renewcommand{\frontmatter}{
 	\pagenumbering{roman}
 	\input{frontmatter/title}
@@ -230,6 +229,7 @@
 	%\frontispiece
 	%\dedicationpage
 	\abstractpage
+	\clearpage
 	\tableofcontents
 	%\phantomsection
 	%\clearpage
